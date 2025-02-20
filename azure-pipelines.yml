@@ -6,6 +6,11 @@ pool:
   name: Default
 
 steps:  
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '7.x'  # Adjust based on the SDK version you need
+      installationPath: $(Agent.ToolsDirectory)/dotnet
   - task: JFrogNuGet@1
     inputs:
       command: 'restore'
