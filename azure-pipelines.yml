@@ -16,7 +16,7 @@ steps:
       command: 'restore'
       artifactoryConnection: 'red'
       targetResolveRepo: 'continuous-nuget'
-      solutionPath: '**/*.sln'
+      
 
   - task: JFrogNuGet@1
     inputs:
