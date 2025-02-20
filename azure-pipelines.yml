@@ -33,7 +33,7 @@ steps:
       outputDirectory: '$(Build.ArtifactStagingDirectory)'
       arguments: '/p:PackageVersion=1.0.$(Build.BuildId)' 
 
-  - task: JFrogNuGet@1
+  - task: DotNetCoreCLI@2
     inputs:
       command: 'push'
       artifactoryConnection: 'red'
