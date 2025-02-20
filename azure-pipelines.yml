@@ -34,7 +34,8 @@ steps:
       arguments: '/p:PackageVersion=1.0.$(Build.BuildId)' 
 
       
-  - task: JFrogNuGet@1
+
+  - task: JFrogDotnetCore@1
     inputs:
       command: 'push'
       artifactoryConnection: 'red'
