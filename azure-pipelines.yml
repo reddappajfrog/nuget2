@@ -33,12 +33,18 @@ steps:
       outputDirectory: '$(Build.ArtifactStagingDirectory)'
       arguments: '/p:PackageVersion=1.0.$(Build.BuildId)' 
 
-      
-
   - task: JFrogDotnetCore@1
     inputs:
       command: 'push'
       artifactoryConnection: 'red'
-      targetDeployRepo: 'continuous-nuget'
-      pathToNupkg: '/home/reddappag/myagent/_work/2/a/*'
+      targetDeployRepo: 'continuous-nuget-local'
+      pathToNupkg: '*.nupkg'
+      collectBuildInfo: true
+      buildName: '$(Build.DefinitionName)'
+      buildNumber: '$(Build.BuildNumber)'
+      includeEnvVars: true
+
+
+      
+
       
