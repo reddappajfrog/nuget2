@@ -17,7 +17,7 @@ steps:
       sudo apt-get install -y mono-complete
     displayName: "Install Mono"
     
-  - task: JFrogNuGet@1
+  - task: DotNetCoreCLI@2
     displayName: 'Restore NuGet Packages'
     inputs:
       command: 'restore'
