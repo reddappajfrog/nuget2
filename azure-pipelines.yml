@@ -23,7 +23,15 @@ steps:
       command: 'restore'
       projects: '**/*.csproj'  
 
-      
+  - task: DotNetCoreCLI@2
+    displayName: 'Pack NuGet Package'
+    inputs:
+      command: 'pack'
+      packagesToPack: '**/*.csproj'
+      versioningScheme: 'off'  # Disable automatic versioning
+      configuration: 'Release'
+      outputDirectory: '$(Build.ArtifactStagingDirectory)'
+      arguments: '/p:PackageVersion=1.0.$(Build.BuildId)' 
 
   - task: JFrogNuGet@1
     inputs:
