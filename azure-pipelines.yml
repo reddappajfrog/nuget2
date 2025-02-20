@@ -38,7 +38,7 @@ steps:
       command: 'push'
       artifactoryConnection: 'red'
       targetDeployRepo: 'continuous-nuget-local'
-      pathToNupkg: '*.nupkg'
+      pathToNupkg: 'home/reddappag/myagent/_work/2/a/*.nupkg'
       collectBuildInfo: true
       buildName: '$(Build.DefinitionName)'
 
