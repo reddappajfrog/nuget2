@@ -39,6 +39,6 @@ steps:
     inputs:
       command: 'push'
       artifactoryConnection: 'red'
-      targetDeployRepo: 'continuous-nuget-local'
+      targetDeployRepo: 'continuous-nuget'
       pathToNupkg: '/home/reddappag/myagent/_work/2/a/*'
       
