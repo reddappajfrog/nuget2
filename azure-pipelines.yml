@@ -16,6 +16,7 @@ steps:
       command: 'restore'
       artifactoryConnection: 'red'
       targetResolveRepo: 'continuous-nuget'
+      solutionPath: '**/*.csproj'
       
 
   - task: JFrogNuGet@1
