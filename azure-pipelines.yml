@@ -11,6 +11,12 @@ steps:
       packageType: 'sdk'
       version: '7.x'  # Adjust based on the SDK version you need
       installationPath: $(Agent.ToolsDirectory)/dotnet
+      
+  - script: |
+      sudo apt-get update
+      sudo apt-get install -y mono-complete
+    displayName: "Install Mono"
+    
   - task: JFrogNuGet@1
     inputs:
       command: 'restore'
